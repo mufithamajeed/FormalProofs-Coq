@@ -94,7 +94,7 @@ To further develop this project:
 ## Repository Link
 
 The complete project summary is available at:  
-\url{https://github.com/mufithamajeed/FormalProofs-coq/FormalProofs-coq-Project-Summary.pdf}
+\url{FormalLogic_Coq_Project_Summary.pdf}
 
 ---
 
