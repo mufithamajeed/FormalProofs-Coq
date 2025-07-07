@@ -61,10 +61,6 @@ Understanding the boundary between constructive and classical logic is also cent
 3. Open the `formal_proofs.v` file in your Coq environment.
 4. Step through each proof interactively to observe how theorems are constructed and verified.
 
-## Visual Demonstration (Optional)
-
-Screenshots of the proofs at completion (showing `Qed.`) may be used for presentations or reports to visually communicate the verification process.
-
 ## Future Work
 
 Future directions could include:
