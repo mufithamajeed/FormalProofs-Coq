@@ -2,11 +2,11 @@
 (* FormalProofs: Basic Propositional and Predicate Logic in Coq *)
 (* ========================================= *)
 
-(* === Propositional Logic === *)
+(* === PART 1: Propositional Logic Proofs === *)
 
-(* 1. Law of Excluded Middle (Classical Logic Required) *)
 Require Import Classical.
 
+(* 1. Law of Excluded Middle (Classical Logic Required) *)
 Theorem excluded_middle : forall P : Prop, P \/ ~P.
 Proof.
   apply classic.
@@ -39,7 +39,7 @@ Proof.
   - intros [HNP HNQ] [HP | HQ]; [apply HNP | apply HNQ]; assumption.
 Qed.
 
-(* === Predicate Logic === *)
+(* === PART 1: Predicate Logic Proofs === *)
 
 Section Predicate_Logic_Proofs.
 
@@ -64,3 +64,38 @@ Proof.
 Qed.
 
 End Predicate_Logic_Proofs.
+
+
+(* PART 2: Simple Logic Evaluator and Tautology Checker *)
+
+Inductive formula : Type :=
+| FTrue
+| FFalse
+| FVar : nat -> formula
+| FNot : formula -> formula
+| FAnd : formula -> formula -> formula
+| FOr : formula -> formula -> formula
+| FImplies : formula -> formula -> formula.
+
+Fixpoint eval (env : nat -> bool) (f : formula) : bool :=
+  match f with
+  | FTrue => true
+  | FFalse => false
+  | FVar n => env n
+  | FNot f1 => negb (eval env f1)
+  | FAnd f1 f2 => andb (eval env f1) (eval env f2)
+  | FOr f1 f2 => orb (eval env f1) (eval env f2)
+  | FImplies f1 f2 => orb (negb (eval env f1)) (eval env f2)
+  end.
+
+Definition example_formula := FImplies (FAnd (FVar 0) (FImplies (FVar 0) (FVar 1))) (FVar 1).
+
+Lemma example_formula_tautology : forall env, eval env example_formula = true.
+Proof.
+  intros env.
+  unfold example_formula.
+  simpl.
+  destruct (env 0).
+  - destruct (env 1); simpl; reflexivity.
+  - simpl. reflexivity.
+Qed.
