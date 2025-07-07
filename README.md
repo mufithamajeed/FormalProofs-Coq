@@ -91,7 +91,7 @@ To further develop this project:
 
 ---
 
-## Repository Link
+## Project Summary
 
 The complete project summary is available at:  
 [FormalLogic_Coq_Project_Summary.pdf](https://github.com/mufithamajeed/FormalProofs-Coq/blob/ce116c4c09568181551fad5e37cd743d24b95bdb/FormalProofs_Coq_Project_Summary.pdf)
