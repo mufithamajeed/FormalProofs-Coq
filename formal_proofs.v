@@ -1,8 +1,7 @@
-(* ========================================= *)
 (* FormalProofs: Basic Propositional and Predicate Logic in Coq *)
 (* ========================================= *)
 
-(* === PART 1: Propositional Logic Proofs === *)
+(* PART 1: Propositional Logic Proofs *)
 
 Require Import Classical.
 
@@ -39,7 +38,7 @@ Proof.
   - intros [HNP HNQ] [HP | HQ]; [apply HNP | apply HNQ]; assumption.
 Qed.
 
-(* === PART 1: Predicate Logic Proofs === *)
+(* PART 1: Predicate Logic Proofs *)
 
 Section Predicate_Logic_Proofs.
 
