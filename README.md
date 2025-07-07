@@ -87,15 +87,14 @@ To further develop this project:
 ## Tools Used
 
 - **Coq Proof Assistant**
-- **CoqIDE**
 - **Visual Studio Code with Coq extension**
 
 ---
 
 ## Repository Link
 
-The complete code and project documentation are available at:  
-\url{https://github.com/mufithamajeed/FormalProofs-coq}
+The complete project summary is available at:  
+\url{https://github.com/mufithamajeed/FormalProofs-coq/FormalProofs-coq-Project-Summary.pdf}
 
 ---
 
